@@ -32,4 +32,11 @@
 2. **행위 기반 보안 관제 역량 체득** 
 3. **SIEM 연동 가능한 로그 표준화 성공**
 
+## 파일 구조
+```text
+├── README.md               # 프로젝트 상세 설명 및 실행 보고서
+├── attacker.py             # Scapy 기반 매직 패킷 생성 및 전송 공격 스크립트
+├── bpfdoor_mock.py         # Raw Socket 리스닝 및 Reverse Shell 동작 모의 악성코드
+├── bpfdoor_detector.py     # Raw Socket, 프로세스 위장, Reverse Shell 연계 탐지 및 JSON 로깅 엔진
+
 이 코드들은 실제 악성코드가 아니라 연구 및 학습 목적으로 제작된 모의 스크립트입니다.
