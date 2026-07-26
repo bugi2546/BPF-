@@ -13,11 +13,12 @@
 
 ## 핵심 기능 및 구조
 [Magic Packet 전송 (Scapy)] ➔ [Raw Socket 감지 & Reverse Shell 실행 (BPFdoor Mock)] ➔ [실시간 프로세스/소켓 연계 탐지 (Detector)] ➔ [JSON 로그 수집]
+공격 수행(attacker.py) ➔ 위협 동작(bpfdoor_mock.py) ➔ 실시간 행위 탐지 및 대응(bpfdoor_detector.py)
 
 * **BPFdoor 모의 악성코드 구현:** AF_PACKET / SOCK_RAW 기반 Raw Socket 바인딩 및 매직 키워드 수신 시 공격자로 Reverse Shell 연결 수행
 * **공격자 스크립트 및 세션 수립:** Scapy 활용 매직 패킷 송신 및 Netcat 리스너를 통한 공격 세션 수립 재현
 * **행위 기반 탐지 엔진 구현:** psutil 기반 Raw Socket 사용 프로세스 추적 및 외부 IP/Port 연결 행위를 연계한 실시간 탐지 
-* **표준 보안 로그 자동 구조화:** Timestamp, PID, Process Name, Cmdline, Inode, Reason 메타데이터를 포함한 JSON 포맷 파일 로깅 파이프라인 구축 
+* **표준 보안 로그 자동 구조화:** 메타데이터를 포함한 JSON 포맷 파일 로깅 파이프라인 구축 
 
 ## 해결 과정
 * **문제 상황:** 가상 환경 모의 실험 중 정상 프로세스가 사용 중인 Raw Socket과 악성코드의 Raw Socket이 혼재되어 오탐 발생 및 탐지 시점 지연 현상 발생
