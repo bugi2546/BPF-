@@ -13,6 +13,7 @@
 
 ## 핵심 기능 및 구조
 [Magic Packet 전송 (Scapy)] ➔ [Raw Socket 감지 & Reverse Shell 실행 (BPFdoor Mock)] ➔ [실시간 프로세스/소켓 연계 탐지 (Detector)] ➔ [JSON 로그 수집]
+
 공격 수행(attacker.py) ➔ 위협 동작(bpfdoor_mock.py) ➔ 실시간 행위 탐지 및 대응(bpfdoor_detector.py)
 
 * **BPFdoor 모의 악성코드 구현:** AF_PACKET / SOCK_RAW 기반 Raw Socket 바인딩 및 매직 키워드 수신 시 공격자로 Reverse Shell 연결 수행
