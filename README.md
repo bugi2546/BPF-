@@ -37,6 +37,7 @@
 ├── README.md               # 프로젝트 상세 설명 및 실행 보고서
 ├── attacker.py             # Scapy 기반 매직 패킷 생성 및 전송 공격 스크립트
 ├── bpfdoor_mock.py         # Raw Socket 리스닝 및 Reverse Shell 동작 모의 악성코드
-├── bpfdoor_detector.py     # Raw Socket, 프로세스 위장, Reverse Shell 연계 탐지 및 JSON 로깅 엔진
+└── bpfdoor_detector.py     # Raw Socket, 프로세스 위장, Reverse Shell 연계 탐지 및 JSON 로깅 엔진
+```
 
-이 코드들은 실제 악성코드가 아니라 연구 및 학습 목적으로 제작된 모의 스크립트입니다.
+> ⚠️ 이 코드들은 실제 악성코드가 아니라 연구 및 학습 목적으로 제작된 모의 스크립트입니다. 반드시 통제된 가상/실습 환경에서만 사용하세요.
